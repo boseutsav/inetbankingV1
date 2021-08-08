@@ -10,7 +10,7 @@ public class ReadConfig {
 	
 	public ReadConfig()
 	{
-		File src = new File("./Configuration/config.properties");
+		File src = new File(System.getProperty("user.dir")+"\\Configuration\\config.properties");
 
 		try {
 			FileInputStream fis = new FileInputStream(src);
@@ -41,19 +41,19 @@ public class ReadConfig {
 	
 	public String getChromePath()
 	{
-	String chromepath=pro.getProperty("chromepath");
+	String chromepath=System.getProperty("user.dir")+pro.getProperty("chromepath");
 	return chromepath;
 	}
 	
 	public String getIEPath()
 	{
-	String iepath=pro.getProperty("iepath");
+	String iepath=System.getProperty("user.dir")+pro.getProperty("iepath");
 	return iepath;
 	}
 	
 	public String getFirefoxPath()
 	{
-	String firefoxpath=pro.getProperty("firefoxpath");
+	String firefoxpath=System.getProperty("user.dir")+pro.getProperty("firefoxpath");
 	return firefoxpath;
 	}
 
